@@ -1,0 +1,134 @@
+
+<!-- Footer -->
+
+<footer class="footer">
+	<div class="footer_content">
+		<div class="section_container">
+			<div class="container">
+				<div class="row">
+					
+					<!-- About -->
+					<div class="col-xxl-3 col-md-6 footer_col">
+						<div class="footer_about">
+							<!-- Logo -->
+							<div class="footer_logo">
+								<a href="#"><div>a<span>star</span></div></a>
+							</div>
+							<div class="footer_questions">
+								<div class="footer_list">
+									<ul>
+										<li><a href="#">About us</a></li>
+										<li><a href="#">Track Orders</a></li>
+										<li><a href="#">Returns</a></li>
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Shipping</a></li>
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">Partners</a></li>
+										<li><a href="#">Bloggers</a></li>
+										<li><a href="#">Support</a></li>
+										<li><a href="#">Terms of Use</a></li>
+										<li><a href="#">Press</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Questions -->
+					<div class="col-xxl-3 col-md-6 footer_col">
+						<div class="footer_contact">
+							<div class="footer_title">contact</div>
+							<div class="footer_contact_list">
+								<ul>
+									<li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>Your Company Ltd</div></li>
+									<li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68</div></li>
+									<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+53 345 7953 32453</div></li>
+									<li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>office@youremail.com</div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Social -->
+	<div class="footer_social">
+		<div class="section_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_social_container d-flex flex-row align-items-center justify-content-between">
+							<!-- Instagram -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+									<div class="footer_social_title">instagram</div>
+								</div>
+							</a>
+							<!-- Google + -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+									<div class="footer_social_title">google +</div>
+								</div>
+							</a>
+							<!-- Pinterest -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
+									<div class="footer_social_title">pinterest</div>
+								</div>
+							</a>
+							<!-- Facebook -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+									<div class="footer_social_title">facebook</div>
+								</div>
+							</a>
+							<!-- Twitter -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+									<div class="footer_social_title">twitter</div>
+								</div>
+							</a>
+							<!-- YouTube -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+									<div class="footer_social_title">youtube</div>
+								</div>
+							</a>
+							<!-- Tumblr -->
+							<a href="#">
+								<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
+									<div class="footer_social_icon"><i class="fa fa-tumblr-square" aria-hidden="true"></i></div>
+									<div class="footer_social_title">tumblr</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>				
+	</div>
+
+	<!-- Credits -->
+	<div class="credits">
+		<div class="section_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="credits_content d-flex flex-row align-items-center justify-content-end">
+							<div class="credits_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

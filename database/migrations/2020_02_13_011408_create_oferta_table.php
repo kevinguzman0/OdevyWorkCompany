@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateOfertaTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('oferta', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('idProducto')->unsigned();
+            $table->integer('precioOferta');
+            $table->string('descripcion');
+            $table->time('tiempoOferta');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('oferta');
+    }
+}
