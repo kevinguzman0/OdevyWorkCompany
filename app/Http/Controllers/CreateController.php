@@ -35,7 +35,7 @@ class CreateController extends Controller
             [
                 'categoria' => 'required',
                 'caracteristicas' => 'required',
-                'imagen'=> 'mimes:jpeg,bmp,png,gif,jfif,mp4|max:5120',
+                // 'imagen'=> 'mimes:jpeg,bmp,png,gif,jfif,mp4|max:5120',
                 'nombre' => 'required',
                 'descripcionProducto' => 'required',
                 'oferta' => 'required',
@@ -43,6 +43,33 @@ class CreateController extends Controller
                 'precioAbsoluto' => 'required',
             ]);
 
+        $archivo = $_FILES['file'];
+
+        //agregar en una variable el nombre de la imagen
+        $nombre = $archivo['name'];
+
+        //tipo de imagen (jpg, png)
+        $tipo = $archivo['type'];
+
+
+        if($tipo == "image/jpg" || $tipo == "image/jpeg" || $tipo == "image/png" || $tipo == "image/gif"){
+            
+            
+                if(!is_dir('imgProducto')){
+                    mkdir('imgProducto', 0777) or die('no se pudo crear');
+                }else{
+                    echo "la carpeta ya esta creada";
+                }
+
+
+                //coger el archivo y guardarlo
+                
+                move_uploaded_file($archivo['tmp_name'], 'imgProducto/'.$nombre);
+            
+        }else{
+           
+            echo "<h1>Sube una imagen con un formato correcto, por favor...</h1>";
+        }
         $producto = new Producto;
 
         $mensaje = 'Producto registrado correctamente.';
@@ -62,30 +89,30 @@ class CreateController extends Controller
 
             $producto->save();
 
-            if ($request->hasfile('imagen'))
-            {
-                $file = $request->file('imagen');
-                $path = $request->imagen->store('public/fotosProductos');
-                //Storage::disk('public')->delete('\\fotosProductos\\' . $file);
-                $ext = $request->file('imagen')->getClientOriginalExtension();
-                $archivo = 'imagen-id-' . $producto->id . '.' . $ext;
-                $idProducto = $producto->id;
-                ImageProduct::create([
-                    'path' => $archivo,
-                    'idProducto' => $idProducto]);
+            // if ($request->hasfile('imagen'))
+            // {
+            //     $file = $request->file('imagen');
+            //     $path = $request->imagen->store('public/fotosProductos');
+            //     //Storage::disk('public')->delete('\\fotosProductos\\' . $file);
+            //     $ext = $request->file('imagen')->getClientOriginalExtension();
+            //     $archivo = 'imagen-id-' . $producto->id . '.' . $ext;
+            //     $idProducto = $producto->id;
+            //     ImageProduct::create([
+            //         'path' => $archivo,
+            //         'idProducto' => $idProducto]);
 
-                /*
+            //     /*
 
-                $archivo = $producto->imagen;
-                Storage::disk('public')->delete('\\fotosProductos\\' . $archivo);
+            //     $archivo = $producto->imagen;
+            //     Storage::disk('public')->delete('\\fotosProductos\\' . $archivo);
 
-                $file = $request->file('imagen');
-                $ext = $request->file('imagen')->getClientOriginalExtension();
-                $archivo = 'foto-id-' . $producto->id . '.' . $ext;
-                $producto->imagen = strtolower($imagen);
-                Storage::disk('public')->put('\\fotosProductos\\' . $archivo, File::get($file));*/
+            //     $file = $request->file('imagen');
+            //     $ext = $request->file('imagen')->getClientOriginalExtension();
+            //     $archivo = 'foto-id-' . $producto->id . '.' . $ext;
+            //     $producto->imagen = strtolower($imagen);
+            //     Storage::disk('public')->put('\\fotosProductos\\' . $archivo, File::get($file));*/
 
-            }
+            // }
 
             return redirect()->back()->with('mensajeVerde', $mensaje);
         }

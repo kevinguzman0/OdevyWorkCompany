@@ -1,0 +1,11 @@
+.form-table {
+    margin-top: 2em;
+    margin-left: 4em;
+    padding-left: 2em !important;
+    padding-right: -3em !important;
+    border: 1px solid #e6e6e6;
+    box-shadow: 3px 2px 28px -4px rgba(0, 0, 0, 0.75) !important;
+    border-radius: 5px;
+    /* border-top: 10px solid #bbe432;
+    border-left: 10px solid #1a1a1a; */
+}

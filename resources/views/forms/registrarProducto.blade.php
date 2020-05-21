@@ -8,14 +8,19 @@
 
 @section('content')
 
-	<div class="row col-md-12">
 
-	    <div class="row col-md-12 mt-5 ml-5">
-	        <h3>REGISTRO DE PRODUCTOS</h3>
-	    </div>
+	<div class="row col-md-12 ">
 
-	    <div class="row col-md-11 mt-5 ml-5">
+	    
 
+	    <div class="row col-md-11 co-mt-5 co-ml-5 form-table ">
+			
+			<div class="col-md-12 mt-5 ml-7">
+				<h3>REGISTRO DE PRODUCTOS</h3>
+				<br><br>
+			</div>
+			
+		
 	        <form class="col-md-12" 
 	              action="{{ route('ingresar.producto') }}" 
 	              method="POST"
@@ -87,7 +92,7 @@
 	                	 <div class="form-group col-md-12">
 	                	 	<label class="label-margin">Imagen del producto</label>
 	                	 	<div class="custom-file">
-							    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+							    <input type="file" class="custom-file-input" id="validatedCustomFile" name="file" required>
 							    <label class="custom-file-label" for="validatedCustomFile">Seleccione Aqui...</label>
 							</div>
 						</div>
@@ -149,4 +154,5 @@
 	    </div>
 
 	</div>
+
 @endsection

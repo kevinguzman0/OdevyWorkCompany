@@ -10,11 +10,13 @@
 	
 	<div class="row col-md-12">
 
-	    <div class="row col-md-12 mt-5 ml-5">
-	        <h3>REGISTRO DE PROVEEDOR</h3>
-	    </div>
+	    
 
-	    <div class="row col-md-11 mt-5 ml-5">
+	    <div class="row col-md-11 mt-5 ml-5 form-table">
+			<div class="col-md-12 mt-5 ml-7">
+				<h3>REGISTRO DE PROVEEDOR</h3>
+				<br><br>
+			</div>
 
 	        <form class="col-md-12" 
 	              action="{{ route('ingresar.proveedor') }}" 

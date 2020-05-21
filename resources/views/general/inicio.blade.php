@@ -104,17 +104,17 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/home_slider_1.jpg)"></div>
+					<div class="background_image" style="background-image:url(images/fondo.jpg)"></div>
 					<div class="home_content_container">
 						<div class="home_content">
-							<div class="home_discount d-flex flex-row align-items-end justify-content-start">
+							<!-- <div class="home_discount d-flex flex-row align-items-end justify-content-start">
 								<div class="home_discount_num">20</div>
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
 							<div class="button_shop home_button_shop trans_200_shop">
 								<a href="{{ route('formulario.categoria') }}">Shop NOW!</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

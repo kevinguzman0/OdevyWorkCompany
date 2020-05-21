@@ -10,11 +10,13 @@
 	
 	<div class="row col-md-12">
 
-	    <div class="row col-md-12 mt-5 ml-5">
-	        <h3>REGISTRO DE DETALLES</h3>
-	    </div>
+	    
 
-	    <div class="row col-md-5 mt-5 ml-5">
+	    <div class="row col-md-5 mt-5 ml-5 form-table">
+			<div class="col-md-12 mt-5 ml-7">	
+				<h3>REGISTRO DE DETALLES</h3>
+				<br><br>
+			</div>
 
 	    	@if ($mensaje = Session::get('mensajeVerde'))
 		        <div class="form-row col-md-12 ml-3 alert alert-success estilo-success alert-dismissible fade show estilo-mensaje-verde" role="alert">
