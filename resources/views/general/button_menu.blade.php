@@ -41,8 +41,8 @@
 
                     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesion</h1>
                     <div class="social-login">
-                        <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Ingresar con Facebook</span> </button>
-                        <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Ingresar con Google+</span> </button>
+                        <button class="btn facebook-btn social-btn" type="button" onclick="window.location='{{ url("redirect/facebook") }}'"><span><i class="fab fa-facebook-f"></i> Ingresar con Facebook</span> </button>
+                        <button class="btn google-btn social-btn" type="button" onclick="window.location='{{ url("redirect/google") }}'"><span><i class="fab fa-google-plus-g"></i> Ingresar con Google+</span> </button>
                     </div>
                     <p style="text-align:center">O</p>
                     <div class="form-row">
@@ -79,7 +79,7 @@
                     <!--a href="#" id="forgot_pswd">Olvidaste tu contraseña?</a-->
                     <hr>
                     <!-- <p>Don't have an account!</p>  -->
-                    <button class="btn btn-primary btn-block" type="button" id="btn-signup" data-toggle="modal" data-target="#registro" {{--data-dismiss="modal"--}}><i class="m-1 fas fa-user-plus"></p></i> Crear cuenta</button>
+                    <button class="btn btn-primary btn-block" type="button" id="btn-signup" data-toggle="modal" data-target="#registro" data-dismiss="modal" {{--data-dismiss="modal"--}}><i class="m-1 fas fa-user-plus"></p></i> Crear cuenta</button>
                     </form>
                     <br>
                     

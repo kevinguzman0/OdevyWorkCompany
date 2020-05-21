@@ -3,6 +3,10 @@
 Route::get('/', 'GeneralController@verProductos')->name('inicio');
 
 Route::get('salir', 'Auth\LoginController@logout')->name('salir');
+
+Route::get('redirect/{provider}', 'Auth\LoginController@redirect')->name('redirect');
+
+Route::get('callback/{provider}', 'Auth\LoginController@callback')->name('callback');
 #----------------------------------------------------------------------------------------------------
 Route::get('registrar-producto', 'CreateController@formularioProductos')->name('formulario.producto');
 Route::post('producto-ingresado', 'CreateController@registrarProductos')->name('ingresar.producto');
