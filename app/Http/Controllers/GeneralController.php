@@ -25,6 +25,13 @@ class GeneralController extends Controller
     	return view('general.inicio', compact('productos'));
 
     }
+    public function verTablaProductos(){
+
+        $productos = Producto::all();
+        
+        return view('forms.registrarProducto', compact('productos'));
+
+    }
 
     public function logueo(Request $request){
 

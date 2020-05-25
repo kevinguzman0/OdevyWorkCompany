@@ -19,6 +19,7 @@ class CreateProductosTable extends Migration
             $table->bigInteger('idCaracteristica')->unsigned();
             $table->string('nombre');
             $table->string('descripcion');
+            $table->integer('cantidad');
             $table->boolean('oferta'); 
             $table->integer('precioUnitario');
             $table->integer('precioAbsoluto');

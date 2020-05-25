@@ -47,6 +47,13 @@
 			            </div>
 
 			            <div class="col-md-4">
+		                	<div class="form-group col-md-12">
+			                    <label class="label-margin">Cantidad</label>
+			                    <input type="text" maxlength="100" name="cantidad" class="form-control">
+			                </div>
+			            </div>
+
+			            <div class="col-md-4">
 			            	<div class="form-group col-md-12">
 			                    <label class="label-margin">Categoria</label>
 			                    <select name="categoria" id="categoria" class="form-control">
@@ -146,10 +153,39 @@
 	            	<div class="form-group col-md-12">
 	                    <label></label>
 	                    <input type="submit" value="Grabar" name="btnGrabarProducto" class="form-control btn btn-primary">
-	                </div>
-	            </div>	          
-	            
+	                </div>	                
+	            </div>            
 	        </form>
+	        <div class="form-group col-md-2">
+	                    <label></label>	                   
+						<button class="form-control btn btn-primary" type="button" data-toggle="collapse" data-target="#tablaProductos" aria-expanded="false" aria-controls="collapseExample">
+							Ver productos
+							<img src="{{ asset('icons/chevron-down.svg') }}" alt="Ver productos" width="32" height="25" title="Tabla para ver productos" />
+						</button>						
+	                </div>
+	                <div class="collapse col-md-12 mb-3" id="tablaProductos">
+						<div class="container">
+						  <h2>Productos</h2>						  
+						  <table class="table table-hover">
+						    <thead>
+						      <tr>
+						        <th>Nombre del producto</th>
+						        <th>Cantidad</th>
+						        <th>Acciones</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						    @foreach ($productos as $item)
+						      <tr>
+						        <td>{{ $item->nombre }}</td>
+						        <td>{{ $item->cantidad }}</td>
+						        <td>Acciones</td>
+						      </tr>
+						    @endforeach
+						    </tbody>
+						  </table>
+						</div>
+	                </div>
 
 	    </div>
 

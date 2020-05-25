@@ -24,8 +24,9 @@ class CreateController extends Controller
     public function formularioProductos(){
 
     	$categorias = Categoria::all();
+        $productos = Producto::all();
     	$caracteristicas = Caracteristica::all();
-    	return view('forms.registrarProducto', compact('categorias', 'caracteristicas'));
+    	return view('forms.registrarProducto', compact('categorias', 'caracteristicas', 'productos'));
 
     }
 
