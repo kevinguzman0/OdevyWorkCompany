@@ -2,8 +2,10 @@
 
 Route::get('/', 'GeneralController@verProductos')->name('inicio');
 
-Route::get('salir', 'Auth\LoginController@logout')->name('salir');
+Route::get('tabla-productos', 'GeneralController@verTablaProductos')->name('tabla.productos');
 
+Route::get('salir', 'Auth\LoginController@logout')->name('salir');
+ 
 Route::get('redirect/{provider}', 'Auth\LoginController@redirect')->name('redirect');
 
 Route::get('callback/{provider}', 'Auth\LoginController@callback')->name('callback');
