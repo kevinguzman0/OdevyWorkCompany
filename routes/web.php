@@ -7,6 +7,10 @@ Route::get('salir', 'Auth\LoginController@logout')->name('salir');
 Route::get('redirect/{provider}', 'Auth\LoginController@redirect')->name('redirect');
 
 Route::get('callback/{provider}', 'Auth\LoginController@callback')->name('callback');
+
+Route::get('notificacion', function(){
+	return view('general.notificacion');
+})->name('notificacion');
 #----------------------------------------------------------------------------------------------------
 Route::get('registrar-producto', 'CreateController@formularioProductos')->name('formulario.producto');
 Route::post('producto-ingresado', 'CreateController@registrarProductos')->name('ingresar.producto');
@@ -40,7 +44,7 @@ Route::get('añadir-imagen', 'CreateController@crearImagen')->name('añadir.imag
 #--------------Carro de compras---------------------
 Route::get('mostrar-carrito/{id}', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
 
-Route::get('agregar-carrito/{idProducto}/{precioUnitario}' , 'GeneralController@agregarAlCarrito')->name('carrito.agregar');
+Route::get('agregar-carrito/{idProducto}' , 'GeneralController@agregarAlCarrito')->name('carrito.agregar');
 #----------------------------------------------------
 Auth::routes();
 

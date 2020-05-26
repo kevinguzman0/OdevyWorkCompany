@@ -94,9 +94,9 @@ class GeneralController extends Controller
         return redirect()->back()->with('succcess', 'Producto agragado al carrito de compras');
     }
 
-    public function agregarAlCarrito($idProducto, $precioUnitario)
+    public function agregarAlCarrito($idProducto)
     {
-        $carro = Carrito::find($idProducto);        
+        $productoCarrito = Carrito::find($idProducto);        
         $productoCarrito = new Carrito;
         $productoCarrito->idProducto = $idProducto;
         $productoCarrito->cantidad = 1;
@@ -107,4 +107,5 @@ class GeneralController extends Controller
         return redirect()->back();
         
     }
+
 }

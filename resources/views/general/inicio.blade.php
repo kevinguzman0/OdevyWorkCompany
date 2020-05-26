@@ -94,7 +94,7 @@
 
 	<!-- Home -->
 
-	<div class="home">
+	<div class="home spinner-grow">
 
 		@include('general.button_menu')
 

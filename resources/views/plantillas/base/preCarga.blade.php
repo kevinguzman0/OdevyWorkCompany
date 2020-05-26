@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/dropzone.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/myStyle.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
 
 	<!----------------------------------------------------------------------------------------------------->
 

@@ -16,6 +16,7 @@
 	<script src="{{ asset('plugins/greensock/TweenMax.min.js') }}"></script>
 	<script src="{{ asset('plugins/greensock/TimelineMax.min.js') }}"></script>
 	<script src="{{ asset('js/dropzone.js') }}"></script>
+	<script src="{{ asset('js/toastr.js') }}"></script>
 	<!------------------------------------------------------------------------------>
 
 	<!----------------------Productos----------------------------------------------
