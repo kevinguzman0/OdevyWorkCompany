@@ -39,21 +39,21 @@
 
 		            <div class="form-row">
 
-		                <div class="col-md-4">
+		                <div class="col-md-3">
 		                	<div class="form-group col-md-12">
 			                    <label class="label-margin">Nombre</label>
 			                    <input type="text" maxlength="100" name="nombre" class="form-control">
 			                </div>
 			            </div>
 
-			            <div class="col-md-4">
+			            <div class="col-md-3">
 		                	<div class="form-group col-md-12">
 			                    <label class="label-margin">Cantidad</label>
 			                    <input type="text" maxlength="100" name="cantidad" class="form-control">
 			                </div>
 			            </div>
 
-			            <div class="col-md-4">
+			            <div class="col-md-3">
 			            	<div class="form-group col-md-12">
 			                    <label class="label-margin">Categoria</label>
 			                    <select name="categoria" id="categoria" class="form-control">
@@ -67,7 +67,7 @@
 							</div>
 		                </div>
 		                @isset($caracteristicas)
-			                <div class="col-md-4">
+			                <div class="col-md-3">
 			                	<div class="form-group col-md-12">
 				                	<label class="label-margin">Caracteristicas</label>
 				                    <select name="caracteristicas" id="caracteristicas" class="form-control">

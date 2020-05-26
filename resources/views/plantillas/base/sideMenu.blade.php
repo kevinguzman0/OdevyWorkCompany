@@ -34,9 +34,9 @@
 		<!-- Cart -->
 
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
-			<div class="cart_icon"><a href="{{-- route('carrito.mostrar, [ $id ]') --}}">
+			<div class="cart_icon"><a href="{{ route('carrito.mostrar') }}">
 				<img src="images/bag.png" alt="">
-				<div class="cart_num"><span class="badge">{{-- $carrito --}}</span></div>
+				<div class="cart_num"><span class="badge">{{ cantidad_producto_carrito('cantidadCarrito') }}</span></div>
 			</a></div> 
 			<div class="cart_text">Bolsa</div>
 			<div class="cart_price"> </div>

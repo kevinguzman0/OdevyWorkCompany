@@ -15,7 +15,7 @@
 
 		          @auth
 
-		          	<li><button onclick="location.href = '{{ route('carrito.agregar', [ $producto->id, $producto->precioUnitario ]) }}'"><i class="ti-shopping-cart"></i></button></li>
+		          	<li><button onclick="location.href = '{{ route('carrito.agregar', [ $producto->id]) }}'"><i class="ti-shopping-cart"></i></button></li>
 
 		          @else
 		          	<li><button type="button" data-toggle="modal" data-target="#logueo"><i class="ti-shopping-cart"></i></button></li>

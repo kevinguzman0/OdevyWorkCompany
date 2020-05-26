@@ -12,7 +12,7 @@
     <nav class="nav_login">
     	@if (Route::has('login'))
             @auth
-                <a href="#">Ir al carrito</a>
+                <a href="{{ route('carrito.mostrar') }}">Ir al carrito</a>
         		<a href="#">Mis pedidos</a>
                 <a href="{{ route('salir') }}">{{ __('Logout') }}</a>
             @else

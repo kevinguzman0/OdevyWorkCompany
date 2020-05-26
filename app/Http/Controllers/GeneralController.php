@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 use App\Producto;
 use App\Categoria;
 use App\Caracteristica;
@@ -61,8 +62,14 @@ class GeneralController extends Controller
         return redirect()->back()->with('mensajeVerde', $mensaje);
     }
 
-    public function mostrarCarrito($idProducto)
+    public function mostrarCarrito()
     {
+
+        $misProductosCarrito = Carrito::all()->where('idUser', auth()->id());
+
+        return view('general.carrito', compact('misProductosCarrito'));
+
+        /*
         //$carros = Carrito::all();
         //$carrito = Carrito::all()->count();
         
@@ -98,19 +105,37 @@ class GeneralController extends Controller
 
         session()->put('carrito', $carrito);
 
-        return redirect()->back()->with('succcess', 'Producto agragado al carrito de compras');
+        return redirect()->back()->with('succcess', 'Producto agragado al carrito de compras');*/
     }
 
     public function agregarAlCarrito($idProducto)
     {
-        $productoCarrito = Carrito::find($idProducto);        
-        $productoCarrito = new Carrito;
-        $productoCarrito->idProducto = $idProducto;
-        $productoCarrito->cantidad = 1;
-        $productoCarrito->total = $precioUnitario;
+        $productoCarrito = DB::table('productos')->where('id', $idProducto)->first();
+
+        $dobleProducto = Carrito::all()->where('idUser', auth()->id())->first();
+
+        if ($dobleProducto) {
+
+            if ($idProducto == $dobleProducto->idProducto) {
+
+            $dobleProducto->cantidad = $dobleProducto->cantidad+1;
+            $dobleProducto->save();   
+            }
+            
+        }
         
-        $productoCarrito->save();
+        else{
+
+            $nuevoProductoCarrito = Carrito::create([
+                'idProducto' => $productoCarrito->id,
+                'idUser' => auth()->id(),
+                'cantidad' => 1,
+                'total' => $productoCarrito->precioUnitario,
+            ]);
+        }
+
         
+                
         return redirect()->back();
         
     }

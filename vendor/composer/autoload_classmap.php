@@ -24,7 +24,6 @@ return array(
     'App\\Http\\Controllers\\CreateController' => $baseDir . '/app/Http/Controllers/CreateController.php',
     'App\\Http\\Controllers\\GeneralController' => $baseDir . '/app/Http/Controllers/GeneralController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
-    'App\\Http\\Controllers\\SocialController' => $baseDir . '/app/Http/Controllers/SocialController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',

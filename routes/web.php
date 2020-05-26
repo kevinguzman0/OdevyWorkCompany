@@ -44,7 +44,7 @@ Route::get('añadir-imagen', 'CreateController@crearImagen')->name('añadir.imag
 
 
 #--------------Carro de compras---------------------
-Route::get('mostrar-carrito/{id}', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
+Route::get('mostrar-carrito', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
 
 Route::get('agregar-carrito/{idProducto}' , 'GeneralController@agregarAlCarrito')->name('carrito.agregar');
 #----------------------------------------------------

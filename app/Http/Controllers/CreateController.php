@@ -38,6 +38,7 @@ class CreateController extends Controller
                 'caracteristicas' => 'required',
                 // 'imagen'=> 'mimes:jpeg,bmp,png,gif,jfif,mp4|max:5120',
                 'nombre' => 'required',
+                'cantidad' => 'required',
                 'descripcionProducto' => 'required',
                 'oferta' => 'required',
                 'precioUnitario' => 'required',
@@ -84,6 +85,7 @@ class CreateController extends Controller
             $producto->idCaracteristica = $request->caracteristicas;
             $producto->nombre = $request->nombre;
             $producto->descripcion = $request->descripcionProducto;
+            $producto->cantidad = $request->cantidad;
             $producto->oferta = $request->oferta;
             $producto->precioUnitario = $request->precioUnitario;
             $producto->precioAbsoluto = $request->precioAbsoluto;

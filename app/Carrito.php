@@ -11,6 +11,7 @@ class Carrito extends Model
     protected $fillable = [
         'id',
         'idProducto',
+        'idUser',
         'cantidad',
         'total',
     ];
@@ -19,6 +20,11 @@ class Carrito extends Model
 
     public function producto()
     {
-       return $this->hasMany('App\Producto', 'idProducto', 'id'); 
+       return $this->hasOne('App\Producto', 'id', 'idProducto'); 
+    }
+
+    public function user()
+    {
+        return $this->hasOne('App\User', 'id', 'idUser');
     }
 }
