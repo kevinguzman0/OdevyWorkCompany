@@ -69,57 +69,20 @@ class GeneralController extends Controller
 
         return view('general.carrito', compact('misProductosCarrito'));
 
-        /*
-        //$carros = Carrito::all();
-        //$carrito = Carrito::all()->count();
-        
-        $productos = Producto::find($idProducto);
-        $carrito = session()->get('carrito');
-
-        if ($carrito){
-
-            $carrito = [
-                $idProducto => [
-                    "nombre" => $productos->nombre,
-                    "cantidad" => 1,
-                    "precio" => $productos->precioUnitario
-                    //"foto" => $productos->foto
-                ]
-            ];
-
-            session()->put('carrito', $carrito);
-            return redirect()->back()->with('succcess', 'Producto agragado al carrito de compras');
-        }
-        if (isset($carrito[$idProducto])){
-            $carrito[$idProducto]['cantidad']++;
-            session()->put('carrito', $carrito);
-            return redirect()->back()->with('succcess', 'Producto agragado al carrito de compras');
-        }
-
-        $carrito[$idProducto] = [
-            "nombre" => $productos->nombre,
-            "cantidad" => 1,
-            "precio" => $productos->precioUnitario
-            //"foto" => $productos->foto   si la deshabilita dedebe ponerle la coma al anterio
-        ];
-
-        session()->put('carrito', $carrito);
-
-        return redirect()->back()->with('succcess', 'Producto agragado al carrito de compras');*/
     }
 
     public function agregarAlCarrito($idProducto)
     {
-        $productoCarrito = DB::table('productos')->where('id', $idProducto)->first();
+        $productoCarrito = Producto::all()->where('id', $idProducto)->first();
 
-        $dobleProducto = Carrito::all()->where('idUser', auth()->id())->first();
+        $dobleProducto = Carrito::all()->where('idUser', auth()->id())->where('idProducto', $idProducto)->first();
 
         if ($dobleProducto) {
-
+            
             if ($idProducto == $dobleProducto->idProducto) {
 
-            $dobleProducto->cantidad = $dobleProducto->cantidad+1;
-            $dobleProducto->save();   
+                $dobleProducto->cantidad = $dobleProducto->cantidad+1;
+                $dobleProducto->save();   
             }
             
         }
