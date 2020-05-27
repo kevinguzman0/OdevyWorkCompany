@@ -37,8 +37,7 @@
 					@foreach ($misProductosCarrito as $item)
 
 					    <tr>
-							
-							<td style="text-align:center; font-weight: bold;"> {{ auth()->user()->nombre }} </td>
+							<td style="text-align:center; font-weight: bold;"></td>
 
 							<td style="text-align:center;">{{ $item->producto->nombre }}</td>
 							<td style="text-align: center;">{{ $item->cantidad }}</td>

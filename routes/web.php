@@ -39,7 +39,7 @@ Route::post('añadir-producto', 'CreateController@registrarProductoAProveedor')-
 #-------------------------------------------------------------------------------------------------------
 
 Route::get('añadir-imagen', 'CreateController@crearImagen')->name('añadir.imagen');
-//Route::get('/productos', 'ProductosController@destroy')->name('formulario.categoria');
+
 Route::resource('productos', 'ProductosController');
 
 #--------------Carro de compras---------------------

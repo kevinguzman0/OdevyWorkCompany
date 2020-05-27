@@ -62,6 +62,7 @@ class GeneralController extends Controller
 
         return view('general.carrito', compact('misProductosCarrito'));
 
+
     }
 
     public function agregarAlCarrito($idProducto)
