@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'OpenCloud' => array($vendorDir . '/rackspace/php-opencloud/lib'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Highlight\\' => array($vendorDir . '/scrivo/highlight.php'),
     'HighlightUtilities\\' => array($vendorDir . '/scrivo/highlight.php'),

@@ -156,36 +156,46 @@
 	                </div>	                
 	            </div>            
 	        </form>
-	        <div class="form-group col-md-2">
-	                    <label></label>	                   
-						<button class="form-control btn btn-primary" type="button" data-toggle="collapse" data-target="#tablaProductos" aria-expanded="false" aria-controls="collapseExample">
-							Ver productos
-							<img src="{{ asset('icons/chevron-down.svg') }}" alt="Ver productos" width="32" height="25" title="Tabla para ver productos" />
-						</button>						
-	                </div>
-	                <div class="collapse col-md-12 mb-3" id="tablaProductos">
-						<div class="container">
-						  <h2>Productos</h2>						  
-						  <table class="table table-hover">
-						    <thead>
-						      <tr>
-						        <th>Nombre del producto</th>
-						        <th>Cantidad</th>
-						        <th>Acciones</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						    @foreach ($productos as $item)
-						      <tr>
-						        <td>{{ $item->nombre }}</td>
-						        <td>{{ $item->cantidad }}</td>
-						        <td>Acciones</td>
-						      </tr>
-						    @endforeach
-						    </tbody>
-						  </table>
-						</div>
-	                </div>
+        		<div class="form-group col-md-2">
+                    <label></label>	                   
+					<button class="form-control btn btn-primary" type="button" data-toggle="collapse" data-target="#tablaProductos" aria-expanded="false" aria-controls="collapseExample">
+						Ver productos
+						<img src="{{ asset('icons/chevron-down.svg') }}" alt="Ver productos" width="32" height="25" title="Tabla para ver productos" />
+					</button>						
+                </div>
+                <div class="collapse col-md-12 mb-3" id="tablaProductos">
+					<div class="container">
+					  <h2>Productos</h2>						  
+					  <table class="table table-hover">
+					    <thead>
+					      <tr>
+					        <th>Nombre del producto</th>
+					        <th>Cantidad</th>
+					        <th>Acciones</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					    @foreach ($productos as $item)
+					      <tr>
+					        <td>{{ $item->nombre }}</td>
+					        <td>{{ $item->cantidad }}</td>
+					        <td>
+					        	<a href="#" class="btn btn-link link-tabla boton-acciones" data-toggle="modal" data-target="#ver-editar_producto-{{ $item->id }}">
+		        					Editar
+		        				</a>
+					        	<form method="post" action="{{ url('/productos/'.$item->id) }}">
+					        	{{ csrf_field() }}
+					        	{{ method_field('DELETE') }}
+					        	<button type="submit" onclick="return confirm('Esta seguro de borrar este producto');">Borrar</button>
+					        	</form>
+					        </td>
+					      </tr>
+					      @include('modals.modal-editar_producto')
+					    @endforeach
+					    </tbody>
+					  </table>
+					</div>
+                </div>
 
 	    </div>
 
