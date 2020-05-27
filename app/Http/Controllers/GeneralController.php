@@ -67,6 +67,8 @@ class GeneralController extends Controller
 
         $misProductosCarrito = Carrito::all()->where('idUser', auth()->id());
 
+        //$precioTotal = $misProductosCarrito->cantidad * $misProductosCarrito->producto->precioUnitario;
+
         return view('general.carrito', compact('misProductosCarrito'));
 
     }
@@ -102,5 +104,43 @@ class GeneralController extends Controller
         return redirect()->back();
         
     }
+
+    public function limpiarCarrito(){
+
+        $productoCarrito = Carrito::all();
+
+        foreach ($productoCarrito as $producto) {
+
+            $eliminar = Carrito::find($producto->id)->where('idUser', auth()->id());
+            $eliminar->delete();
+
+        }
+
+        return redirect()->back();
+    }
+
+    public function aumentarCantidadProducto($idProducto)
+    {
+        $productoCarrito = Carrito::find($idProducto);
+
+        $productoCarrito->cantidad = $productoCarrito->cantidad+1;
+
+        $productoCarrito->save();
+
+        return redirect()->back();
+    }
+
+    public function disminuirCantidadProducto($idProducto)
+    {
+        $productoCarrito = Carrito::find($idProducto);
+
+        $productoCarrito->cantidad = $productoCarrito->cantidad-1;
+
+        $productoCarrito->save();
+
+        return redirect()->back();
+    }
+
+
 
 }

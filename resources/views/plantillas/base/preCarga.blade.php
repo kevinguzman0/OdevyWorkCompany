@@ -15,14 +15,12 @@
 
 	<!----------------------------------------------------------------------------------------------------->
 
+	<!-----------------------------------------Carrito--------------------------------------------->
+	<link rel="stylesheet" type="text/css" href="{{ asset ('css/cart_responsive.css') }}">
+
 	<!-----------------------------------------Productos--------------------------------------------------->
 	<link rel="stylesheet" href="{{ asset('vendors/themify-icons/themify-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  	<!--<link rel="stylesheet" href="{{-- asset('vendors/bootstrap/bootstrap.min.css') }}">
-  	<link rel="stylesheet" href="{{ asset('vendors/fontawesome/css/all.min.css') }}">
-  	<link rel="stylesheet" href="{{ asset('vendors/nice-select/nice-select.css') }}">
-  	<link rel="stylesheet" href="{{ asset('vendors/owl-carousel/owl.theme.default.min.css') --}}">-->
-  	
   	<!----------------------------------------------------------------------------------------------------->
 
 @endsection

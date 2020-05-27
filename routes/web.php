@@ -47,6 +47,12 @@ Route::get('añadir-imagen', 'CreateController@crearImagen')->name('añadir.imag
 Route::get('mostrar-carrito', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
 
 Route::get('agregar-carrito/{idProducto}' , 'GeneralController@agregarAlCarrito')->name('carrito.agregar');
+
+Route::get('limpiar-carrito' , 'GeneralController@limpiarCarrito')->name('carrito.limpiar');
+
+Route::get('aumentar-carrito/{idProducto}', 'GeneralController@aumentarCantidadProducto')->name('carrito.cantidad.aumentar');
+
+Route::get('disminuir-carrito/{idProducto}', 'GeneralController@disminuirCantidadProducto')->name('carrito.cantidad.disminuir');
 #----------------------------------------------------
 Auth::routes();
 

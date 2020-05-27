@@ -19,6 +19,8 @@
 	<script src="{{ asset('js/toastr.js') }}"></script>
 	<!------------------------------------------------------------------------------>
 
+	<!----------------------Carrito--------------------------------------------------->
+	<script src="{{ asset('js/cart.js') }}"></script>
 	<!----------------------Productos----------------------------------------------
 	<script src="{{ asset('vendors/jquery/jquery-3.2.1.min.js') }}"></script>
 	<script src="{{ asset('vendors/bootstrap/bootstrap.bundle.min.js') }}"></script>
