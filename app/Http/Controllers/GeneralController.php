@@ -112,6 +112,7 @@ class GeneralController extends Controller
         foreach ($productoCarrito as $producto) {
 
             $eliminar = Carrito::find($producto->id)->where('idUser', auth()->id());
+            
             $eliminar->delete();
 
         }
