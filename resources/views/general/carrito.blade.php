@@ -27,6 +27,20 @@
 
 		<!-- Cart -->
 
+					    <tr>
+							<td style="text-align:center; font-weight: bold;"></td>
+
+							<td style="text-align:center;">{{ $item->producto->nombre }}</td>
+							<td style="text-align: center;">{{ $item->cantidad }}</td>
+							<td style="text-align:center;">{{ $item->producto->precioUnitario }}</td>
+						</tr>
+
+					@endforeach
+				</tbody>
+			</table>
+
+			@endisset
+
 	<div class="cart_section">
 		<div class="section_container">
 			<div class="container">

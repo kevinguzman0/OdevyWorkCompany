@@ -2,8 +2,6 @@
 
 Route::get('/', 'GeneralController@verProductos')->name('inicio');
 
-Route::get('tabla-productos', 'GeneralController@verTablaProductos')->name('tabla.productos');
-
 Route::get('salir', 'Auth\LoginController@logout')->name('salir');
  
 Route::get('redirect/{provider}', 'Auth\LoginController@redirect')->name('redirect');
@@ -42,6 +40,7 @@ Route::post('añadir-producto', 'CreateController@registrarProductoAProveedor')-
 
 Route::get('añadir-imagen', 'CreateController@crearImagen')->name('añadir.imagen');
 
+Route::resource('productos', 'ProductosController');
 
 #--------------Carro de compras---------------------
 Route::get('mostrar-carrito', 'GeneralController@mostrarCarrito')->name('carrito.mostrar');
